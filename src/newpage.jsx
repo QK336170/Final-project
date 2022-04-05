@@ -394,35 +394,6 @@ export class Footer extends React.Component {
   }
 }
 
-
-export function Width() {
-  const [dimensions, setDimension] = React.useState({ 
-    width: window.innerWidth
-  })
-  React.useEffect(() => {
-    function handleResize() {
-      setDimension({
-        width: window.innerWidth
-      })   
-    }
-    window.addEventListener('resize', handleResize)
-  })
-  if(this.width < 400){
-    return(
-      <div id="dropbut">
-        <DropdownButton id="dropdown-basic-button" title="Dropdown button">
-          <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-          <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-          <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-        </DropdownButton>
-        <div id="result">Rendered at {dimensions.width}</div>
-      </div>
-    )
-  }
-  return <div id="result">Rendered at {dimensions.width}</div>
-
-}
-
 /*class Main extends React.Component {
  constructor(props) {
     super(props);
